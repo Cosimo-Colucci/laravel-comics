@@ -4,11 +4,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>@yield('title', 'Laravel App')</title>
+
+        @vite('resources/js/app.js')
+        @yield('custom-stylesheets')
+        @yield('custom-script-head')
     </head>
     <body>
+        @include('partials.header')
         <main>
             @yield('main-section')
         </main>
+        @include('partials.footer')
     @vite('resources/js/app.js')
     </body>
 </html>
